@@ -109,7 +109,7 @@
     .hero {
       max-width: 1220px;
       margin: 0 auto;
-      padding: 32px 40px 24px;
+      padding: 96px 40px 24px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -244,10 +244,12 @@
     ───────────────────────────────────────── */
     .hero-phones {
       position: relative;
-      height: 420px;
+      height: 460px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      overflow: visible;
+      padding-top: 40px;
     }
 
     .iphone {
@@ -265,8 +267,8 @@
     /* Left phone */
     .iphone-left {
       z-index: 5;
-      left: 0;
-      transform: rotate(-6deg) translateY(48px);
+      left: 50%;
+      transform: translateX(-230px) rotate(-8deg) translateY(48px);
       transform-origin: bottom center;
       opacity: 0.92;
     }
@@ -274,8 +276,8 @@
     /* Right phone */
     .iphone-right {
       z-index: 5;
-      right: 0;
-      transform: rotate(6deg) translateY(48px);
+      left: 50%;
+      transform: translateX(20px) rotate(12deg) translateY(48px);
       transform-origin: bottom center;
       opacity: 0.92;
     }
@@ -722,6 +724,7 @@
     .trust-wrap {
       background: var(--bg);
       padding: 0 40px 32px;
+      margin-top: 64px;
     }
 
     @media (max-width: 720px) { .trust-wrap { padding: 0 20px 60px; } }
@@ -825,7 +828,7 @@
 
     /* ── The idea ── */
     .idea-section {
-      padding: 48px 64px;
+      padding: 80px 64px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -1054,7 +1057,7 @@
       </h1>
 
       <p class="hero-p">
-        faelo is a private network where your people share what they're doing next, from a football watch party to a marathon across the world.
+        faelo is a private network where your people share what they're doing next, from a local Sunday roast to a marathon across the world.
       </p>
 
       <div class="hero-ctas">
@@ -1082,7 +1085,7 @@
         </div>
         <div class="trust-marker">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Made for together
+          Made for friends
         </div>
       </div>
     </div>
@@ -1294,7 +1297,7 @@
   <div class="trust-strip">
     <div class="trust-col">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <p>Designed for<br />modern social planning.</p>
+      <p>Designed for<br />real life.</p>
     </div>
     <div class="trust-divider"></div>
     <div class="trust-col">
@@ -1314,6 +1317,10 @@
 <!-- What is faelo -->
 
 <!-- The idea -->
+<div style="width:100%;max-height:480px;overflow:hidden;position:relative;">
+  <img src="friends.png" alt="Real plans. Real friends. Real life." style="width:100%;height:480px;object-fit:cover;object-position:center 30%;display:block;" />
+</div>
+
 <section class="idea-section">
   <div class="section-label">What is faelo</div>
   <p class="idea-lead">
