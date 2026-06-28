@@ -137,11 +137,12 @@
       pointer-events: none;
     }
     .hero-inner {
-      max-width: 1160px; margin: 0 auto; padding: 0 64px;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 72px; align-items: center;
+      max-width: 760px; margin: 0 auto; padding: 0 64px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
       position: relative; z-index: 1;
     }
+    .hero-left { width: 100%; }
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 13px; font-weight: 600; color: var(--muted);
@@ -159,10 +160,11 @@
     .hero-h1 em { font-style: normal; color: var(--orange); }
     .hero-sub {
       font-size: 18px; line-height: 1.75; color: var(--muted);
-      max-width: 440px; margin-bottom: 40px;
+      max-width: 480px; margin: 0 auto 40px;
     }
     .hero-actions {
       display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      justify-content: center;
     }
     .btn-dark {
       display: inline-flex; align-items: center; gap: 8px;
@@ -180,7 +182,7 @@
     .btn-ghost:hover { color: var(--dark); }
     .hero-trust {
       display: flex; align-items: center; gap: 24px;
-      margin-top: 32px; flex-wrap: wrap;
+      margin-top: 32px; flex-wrap: wrap; justify-content: center;
     }
     .trust-chip {
       display: flex; align-items: center; gap: 7px;
@@ -650,55 +652,6 @@
       </div>
     </div>
 
-    <div class="hero-visual reveal">
-      <div class="hero-plan-wrap">
-        <!-- Cards side by side -->
-        <div class="h-cards-row">
-          <!-- Daniel's plan -->
-          <div class="h-plan-card">
-            <div class="h-card-top">
-              <img class="h-av" src="https://randomuser.me/api/portraits/men/85.jpg" alt="Daniel" />
-              <div>
-                <div class="h-av-name">Daniel</div>
-                <div class="h-av-city">Dublin, Ireland</div>
-              </div>
-            </div>
-            <span class="h-type-badge">Trip</span>
-            <div class="h-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              12–15 July
-            </div>
-            <div class="h-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Rome, Italy
-            </div>
-          </div>
-          <!-- Sarah's plan -->
-          <div class="h-plan-card">
-            <div class="h-card-top">
-              <img class="h-av" src="https://randomuser.me/api/portraits/women/26.jpg" alt="Sarah" />
-              <div>
-                <div class="h-av-name">Sarah</div>
-                <div class="h-av-city">London, UK</div>
-              </div>
-            </div>
-            <span class="h-type-badge">Trip</span>
-            <div class="h-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              14–17 July
-            </div>
-            <div class="h-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Rome, Italy
-            </div>
-          </div>
-        </div>
-        <!-- Overlap badge below -->
-        <div class="h-connector">
-          <div class="h-overlap-badge">Overlap · Rome · 14–15 July</div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -758,47 +711,47 @@
     <div class="overlap-grid">
 
       <div class="overlap-visual">
-        <div class="ov-card-wrap">
-          <div class="ov-card reveal">
-            <div class="ov-card-top">
-              <img class="ov-av" src="https://randomuser.me/api/portraits/men/85.jpg" alt="Daniel" />
-              <div>
-                <div class="ov-name">Daniel</div>
-                <div class="ov-city">Dublin, Ireland</div>
+        <div class="hero-plan-wrap reveal">
+          <div class="h-cards-row">
+            <div class="h-plan-card">
+              <div class="h-card-top">
+                <img class="h-av" src="https://randomuser.me/api/portraits/men/85.jpg" alt="Daniel" />
+                <div>
+                  <div class="h-av-name">Daniel</div>
+                  <div class="h-av-city">Dublin, Ireland</div>
+                </div>
+              </div>
+              <span class="h-type-badge">Trip</span>
+              <div class="h-row">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                12–15 July
+              </div>
+              <div class="h-row">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Rome, Italy
               </div>
             </div>
-            <span class="ov-badge">Trip</span>
-            <div class="ov-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              12–15 July
-            </div>
-            <div class="ov-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Rome, Italy
-            </div>
-          </div>
-          <div class="ov-connector reveal">
-            <div class="v-line v-line-top"></div>
-            <div class="ov-pill">Overlap<br/>Rome · 14–15 July</div>
-            <div class="v-line v-line-bot"></div>
-          </div>
-          <div class="ov-card reveal">
-            <div class="ov-card-top">
-              <img class="ov-av" src="https://randomuser.me/api/portraits/women/26.jpg" alt="Sarah" />
-              <div>
-                <div class="ov-name">Sarah</div>
-                <div class="ov-city">London, UK</div>
+            <div class="h-plan-card">
+              <div class="h-card-top">
+                <img class="h-av" src="https://randomuser.me/api/portraits/women/26.jpg" alt="Sarah" />
+                <div>
+                  <div class="h-av-name">Sarah</div>
+                  <div class="h-av-city">London, UK</div>
+                </div>
+              </div>
+              <span class="h-type-badge">Trip</span>
+              <div class="h-row">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                14–17 July
+              </div>
+              <div class="h-row">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Rome, Italy
               </div>
             </div>
-            <span class="ov-badge">Trip</span>
-            <div class="ov-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              14–17 July
-            </div>
-            <div class="ov-row">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Rome, Italy
-            </div>
+          </div>
+          <div class="h-connector">
+            <div class="h-overlap-badge">Overlap · Rome · 14–15 July</div>
           </div>
         </div>
       </div>
