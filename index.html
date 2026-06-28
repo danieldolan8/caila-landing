@@ -495,7 +495,7 @@
       background: var(--accent);
       border-radius: 50%;
       border: 2px solid #fff;
-      box-shadow: 0 2px 6px rgba(255,122,69,0.4);
+      box-shadow: 0 2px 6px rgba(6,30,66,0.35);
     }
 
     .map-dot.blue { background: #0071E3; box-shadow: 0 2px 6px rgba(0,113,227,0.4); }
@@ -1243,20 +1243,20 @@
     .trust-col:hover { transform: translateY(-2px); }
 
     /* ─────────────────────────────────────────
-       APP ALIGNMENT — orange accent, tighter radii, gradient banner
+       APP ALIGNMENT — midnight blue primary, tighter radii, gradient banner
     ───────────────────────────────────────── */
 
-    /* Orange — the app's attention/action colour */
-    #progress-bar { background: linear-gradient(90deg, #FF7A45, #2563EB, #8B6CFF); }
-    .header-logo  { color: #FF7A45; }
-    .hero-badge   { color: #E8551A; background: rgba(255,122,69,0.09); border-color: rgba(255,122,69,0.22); }
-    .hero-h1 .line-accent { color: #FF7A45; }
-    .section-label         { color: #FF7A45; }
-    .cta-section h2 span   { color: #FF7A45; }
-    .mission-card h3       { color: #FF7A45; }
+    /* Midnight blue + teal — the app's actual colour system */
+    #progress-bar { background: linear-gradient(90deg, #2CB7A8, #2563EB, #8B6CFF); }
+    .header-logo  { color: #061E42; }
+    .hero-badge   { color: #1A7A72; background: rgba(44,183,168,0.09); border-color: rgba(44,183,168,0.22); }
+    .hero-h1 .line-accent { color: #2CB7A8; }
+    .section-label         { color: #061E42; }
+    .cta-section h2 span   { color: #2CB7A8; }
+    .mission-card h3       { color: #061E42; }
 
-    /* Number badges → circles, matching app badge language */
-    .hiw-num { background: #FF7A45; border-radius: 50%; }
+    /* Number badges → midnight blue circles */
+    .hiw-num { background: #061E42; border-radius: 50%; }
 
     /* Dark banner → same navy gradient as the in-app overlap card */
     .dark-banner { background: linear-gradient(135deg, #061E42 0%, #0D3570 100%); }
@@ -1329,8 +1329,8 @@
     .problem-icon {
       width: 36px; height: 36px;
       border-radius: 10px;
-      background: rgba(255,122,69,0.10);
-      color: #FF7A45;
+      background: rgba(6,30,66,0.07);
+      color: #061E42;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
@@ -1386,13 +1386,13 @@
     }
     .overlap-line {
       width: 28px; height: 1px;
-      background: linear-gradient(90deg, rgba(255,122,69,0.2), rgba(255,122,69,0.6));
+      background: linear-gradient(90deg, rgba(6,30,66,0.15), rgba(6,30,66,0.5));
     }
     .overlap-line.right {
-      background: linear-gradient(90deg, rgba(255,122,69,0.6), rgba(255,122,69,0.2));
+      background: linear-gradient(90deg, rgba(6,30,66,0.5), rgba(6,30,66,0.15));
     }
     .overlap-pill-badge {
-      background: #FF7A45;
+      background: #061E42;
       color: white;
       font-size: 11px; font-weight: 800;
       text-align: center;
@@ -1400,7 +1400,7 @@
       border-radius: 12px;
       line-height: 1.5;
       white-space: nowrap;
-      box-shadow: 0 4px 20px rgba(255,122,69,0.40);
+      box-shadow: 0 4px 20px rgba(6,30,66,0.50);
     }
     @media (max-width: 680px) {
       .overlap-demo { flex-direction: column; gap: 12px; }
@@ -1420,7 +1420,7 @@
       content: '';
       position: absolute;
       width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,122,69,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(44,183,168,0.10) 0%, transparent 70%);
       top: -150px; right: -100px; pointer-events: none;
     }
     .privacy-section::after {
@@ -1815,7 +1815,7 @@
   <p class="section-body" style="max-width: 720px; font-size: 17px; line-height: 1.8;">
     The best moments with friends are often unplanned, almost missed, or discovered too late. Caila is built for the space before the photo, before the post, before the memory — when plans can still become shared experiences.
   </p>
-  <p class="section-body" style="max-width: 720px; font-size: 17px; line-height: 1.8; margin-top: 20px; font-weight: 600; color: #FF7A45;">
+  <p class="section-body" style="max-width: 720px; font-size: 17px; line-height: 1.8; margin-top: 20px; font-weight: 600; color: #2CB7A8;">
     A private network for real friends, built around real life.
   </p>
 </section>
@@ -1828,7 +1828,7 @@
     <p>
       Add an upcoming plan — a trip, event or idea. Caila quietly checks for overlaps with the plans shared by your friends. If there's a match, both of you can see it.
     </p>
-    <p style="color: #FF7A45; font-weight: 600; font-size: 16px; margin-top: 16px;">Before the moment passes.</p>
+    <p style="color: #2CB7A8; font-weight: 600; font-size: 16px; margin-top: 16px;">Before the moment passes.</p>
     <!-- Overlap demo visual -->
     <div class="overlap-demo">
       <div class="overlap-person-card">
