@@ -1031,7 +1031,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // Hero: reveal immediately on load
-  const heroEls = ['.hero-eyebrow', '.hero-h1', '.hero-sub', '.hero-actions', '.hero-trust', '.hero-visual'];
+  const heroEls = ['.hero-eyebrow', '.hero-h1', '.hero-sub', '.hero-actions', '.hero-trust', '.hero-visual', '.hero-char'];
   heroEls.forEach((sel, i) => {
     const el = document.querySelector(sel);
     if (!el) return;
