@@ -1026,6 +1026,60 @@
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { font-size: 13px; color: var(--secondary); text-decoration: none; }
     .footer-links a:hover { color: var(--primary); }
+
+    /* ── Plan types ── */
+    .plan-section {
+      padding: 120px 64px;
+      background: var(--bg);
+    }
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 56px;
+    }
+    .plan-card {
+      border-radius: 20px;
+      padding: 28px 24px 32px;
+    }
+    .plan-card.happening { background: #E6F7F5; }
+    .plan-card.event     { background: #EAF0FD; }
+    .plan-card.trip      { background: #FEF3E2; }
+    .plan-card.float     { background: #EDE8FF; }
+    .plan-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .plan-card.happening .plan-icon { background: #C2EDE9; }
+    .plan-card.event     .plan-icon { background: #C8D9FA; }
+    .plan-card.trip      .plan-icon { background: #FDE4B4; }
+    .plan-card.float     .plan-icon { background: #D9D0FF; }
+    .plan-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.2px;
+    }
+    .plan-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--secondary);
+    }
+    @media (max-width: 900px) {
+      .plan-grid { grid-template-columns: repeat(2, 1fr); }
+      .plan-section { padding: 80px 32px; }
+    }
+    @media (max-width: 520px) {
+      .plan-grid { grid-template-columns: 1fr; }
+      .plan-section { padding: 64px 24px; }
+    }
   </style>
 </head>
 <body>
@@ -1371,6 +1425,35 @@
       <div class="hiw-num">3</div>
       <h3>Join and connect</h3>
       <p>Tap to join a friend's plan or message them directly. The moment that used to require twelve messages now takes one tap.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Plan Types -->
+<section class="plan-section">
+  <div class="section-label">Plan types</div>
+  <h2 class="section-title">Share what you're doing next</h2>
+  <p class="section-body">Add your trips, events, regular plans, and loose ideas. Caila matches them against what your friends are sharing and surfaces the moments where your worlds overlap.</p>
+  <div class="plan-grid">
+    <div class="plan-card happening">
+      <div class="plan-icon">⚡</div>
+      <h3>Happening</h3>
+      <p>Something you do regularly — a weekly run, your usual Friday pub, a regular plan friends can join when they're around.</p>
+    </div>
+    <div class="plan-card event">
+      <div class="plan-icon">🎫</div>
+      <h3>Event</h3>
+      <p>A one-off occasion with a date, location, and an optional ticket link. Perfect for gigs, festivals, and things you've booked.</p>
+    </div>
+    <div class="plan-card trip">
+      <div class="plan-icon">✈️</div>
+      <h3>Trip</h3>
+      <p>A period of travel with start and end dates. Friends see where you'll be and when, unlocking overlaps you didn't know existed.</p>
+    </div>
+    <div class="plan-card float">
+      <div class="plan-icon">💡</div>
+      <h3>Float</h3>
+      <p>A loose idea or intention — "thinking of doing this." No date needed. Float it, see who's interested, make it happen.</p>
     </div>
   </div>
 </section>
