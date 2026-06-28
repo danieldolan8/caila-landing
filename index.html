@@ -1080,9 +1080,165 @@
       .plan-grid { grid-template-columns: 1fr; }
       .plan-section { padding: 64px 24px; }
     }
+
+    /* ── Scroll progress bar ── */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2CB7A8, #2563EB, #8B6CFF);
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.08s linear;
+      pointer-events: none;
+    }
+
+    /* ── Header scroll shadow ── */
+    .site-header { transition: box-shadow 0.25s ease; }
+    .site-header.scrolled { box-shadow: 0 4px 24px rgba(6,30,66,0.10); }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Phone float animation ── */
+    @keyframes floatCenter {
+      0%, 100% { transform: translateX(-50%) translateY(0px); }
+      50%       { transform: translateX(-50%) translateY(-12px); }
+    }
+    @keyframes floatLeft {
+      0%, 100% { transform: translateX(-230px) rotate(-8deg) translateY(48px); }
+      50%       { transform: translateX(-230px) rotate(-8deg) translateY(38px); }
+    }
+    @keyframes floatRight {
+      0%, 100% { transform: translateX(20px) rotate(12deg) translateY(48px); }
+      50%       { transform: translateX(20px) rotate(12deg) translateY(38px); }
+    }
+    @keyframes floatMobile {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+    .iphone-center { animation: floatCenter 4.2s ease-in-out infinite; }
+    .iphone-left   { animation: floatLeft 4.8s ease-in-out infinite 0.5s; }
+    .iphone-right  { animation: floatRight 3.9s ease-in-out infinite 1s; }
+    @media (max-width: 480px) {
+      .iphone-center { animation-name: floatMobile; }
+    }
+    @media (max-width: 900px) {
+      @keyframes floatLeft {
+        0%, 100% { transform: translateX(-230px) rotate(-8deg) translateY(48px); }
+        50%       { transform: translateX(-230px) rotate(-8deg) translateY(40px); }
+      }
+    }
+
+    /* ── Hero background orbs ── */
+    .hero { position: relative; overflow: visible; }
+    .hero > *:not(.hero-orb) { position: relative; z-index: 1; }
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes orbPulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50%       { opacity: 0.85; transform: scale(1.08); }
+    }
+
+    /* ── Plan card hover ── */
+    .plan-card {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
+      cursor: default;
+    }
+    .plan-card:hover { transform: translateY(-5px); }
+    .plan-card.happening:hover { box-shadow: 0 16px 40px rgba(44,183,168,0.22); }
+    .plan-card.event:hover     { box-shadow: 0 16px 40px rgba(37,99,235,0.18); }
+    .plan-card.trip:hover      { box-shadow: 0 16px 40px rgba(217,119,6,0.18); }
+    .plan-card.float:hover     { box-shadow: 0 16px 40px rgba(139,108,255,0.22); }
+
+    /* ── How it works card hover ── */
+    .hiw-card {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.22s ease, box-shadow 0.22s ease;
+    }
+    .hiw-card:hover {
+      transform: translateY(-4px);
+      background: var(--surface);
+      box-shadow: 0 16px 40px rgba(6,30,66,0.08);
+    }
+
+    /* ── Mission card hover ── */
+    .mission-card {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
+    }
+    .mission-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(6,30,66,0.09);
+    }
+
+    /* ── Dark banner orbs ── */
+    .dark-banner { position: relative; overflow: hidden; }
+    .dark-banner::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(44,183,168,0.10) 0%, transparent 70%);
+      top: -180px; right: -80px;
+      pointer-events: none;
+      animation: orbPulse 6s ease-in-out infinite;
+    }
+    .dark-banner::after {
+      content: '';
+      position: absolute;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,108,255,0.09) 0%, transparent 70%);
+      bottom: -140px; left: -40px;
+      pointer-events: none;
+      animation: orbPulse 7s ease-in-out infinite 1.5s;
+    }
+    .dark-banner-inner { position: relative; z-index: 1; }
+
+    /* ── CTA glow pulse ── */
+    @keyframes ctaGlow {
+      0%, 100% { box-shadow: 0 8px 28px rgba(6,30,66,0.20); }
+      50%       { box-shadow: 0 14px 44px rgba(6,30,66,0.38); }
+    }
+    .cta-big { animation: ctaGlow 3.2s ease-in-out infinite; }
+    .cta-big:hover { animation: none; opacity: 0.9; transform: translateY(-2px); }
+
+    /* ── Idea section highlight ── */
+    .idea-lead em {
+      font-style: normal;
+      color: var(--accent);
+      position: relative;
+    }
+    .idea-lead em::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 100%; height: 2px;
+      background: var(--accent);
+      opacity: 0.4;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .idea-lead.visible em::after { transform: scaleX(1); }
+
+    /* ── Trust strip animate numbers ── */
+    .trust-col { transition: transform 0.2s ease; }
+    .trust-col:hover { transform: translateY(-2px); }
   </style>
 </head>
 <body>
+<div id="progress-bar"></div>
 
 <!-- ── Header ── -->
 <header class="site-header">
@@ -1504,5 +1660,97 @@
   </nav>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const bar = document.getElementById('progress-bar');
+  const header = document.querySelector('.site-header');
+
+  // Scroll progress + header shadow
+  window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (window.scrollY / max * 100) + '%';
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Hero background orbs
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    [
+      { size: 520, color: 'rgba(44,183,168,0.08)', top: '-140px', right: '-80px', delay: '0s' },
+      { size: 420, color: 'rgba(139,108,255,0.07)', bottom: '-100px', left: '-60px', delay: '2.5s' },
+      { size: 260, color: 'rgba(37,99,235,0.07)', top: '60px', right: '30%', delay: '1.2s' },
+    ].forEach(cfg => {
+      const orb = document.createElement('div');
+      orb.className = 'hero-orb';
+      orb.style.cssText = [
+        `width:${cfg.size}px`, `height:${cfg.size}px`,
+        `background:radial-gradient(circle,${cfg.color} 0%,transparent 70%)`,
+        cfg.top    ? `top:${cfg.top}`       : '',
+        cfg.bottom ? `bottom:${cfg.bottom}` : '',
+        cfg.right  ? `right:${cfg.right}`   : '',
+        cfg.left   ? `left:${cfg.left}`     : '',
+        `animation:orbPulse ${5 + Math.random() * 3}s ease-in-out infinite`,
+        `animation-delay:${cfg.delay}`,
+      ].filter(Boolean).join(';');
+      hero.prepend(orb);
+    });
+  }
+
+  // Scroll reveal — elements to animate
+  const revealSelectors = [
+    '.section-label', '.section-title', '.idea-lead',
+    '.hiw-card', '.plan-card', '.mission-card',
+    '.trust-col', '.feat-tile',
+    '.dark-banner h2', '.dark-banner p',
+    '.cta-section h2', '.cta-section p', '.cta-big',
+  ];
+  const revealEls = document.querySelectorAll(revealSelectors.join(','));
+
+  // Stagger sibling cards in the same grid
+  const seen = new Map();
+  revealEls.forEach(el => {
+    el.classList.add('reveal');
+    const key = el.parentElement;
+    const group = seen.get(key) || [];
+    group.push(el);
+    seen.set(key, group);
+  });
+  seen.forEach(group => {
+    if (group.length > 1) {
+      group.forEach((el, i) => { el.style.transitionDelay = (i * 0.1) + 's'; });
+    }
+  });
+
+  // Trigger idea-lead underline when visible
+  const ideaLead = document.querySelector('.idea-lead');
+  const ideaObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ideaObs.unobserve(e.target); } });
+  }, { threshold: 0.4 });
+  if (ideaLead) ideaObs.observe(ideaLead);
+
+  // General reveal observer
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Hero left column — stagger in on load
+  const heroItems = ['.hero-badge', '.hero-h1', '.hero-p', '.hero-ctas', '.hero-trust', '.hero-phones'];
+  heroItems.forEach(sel => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    el.classList.add('reveal');
+    el.style.transitionDelay = (heroItems.indexOf(sel) * 0.1) + 's';
+  });
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    heroItems.forEach(sel => {
+      const el = document.querySelector(sel);
+      if (el) el.classList.add('visible');
+    });
+  }));
+});
+</script>
 </body>
 </html>
