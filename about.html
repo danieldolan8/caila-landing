@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Caila — The Social Planning App for Real Friends</title>
+  <meta name="description" content="Learn about Caila, a private social planning app that helps real friends share trips, events and plans before they happen." />
+  <link rel="canonical" href="https://caila.social/about" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="About Caila" />
+  <meta property="og:description" content="Caila is a private social planning app for real friends, upcoming plans and real-life overlaps." />
+  <meta property="og:url" content="https://caila.social/about" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5F1EC;
+      --surface: #FFFCFA;
+      --dark: #061E42;
+      --muted: #746D7C;
+      --border: #E5DDE8;
+      --purple: #8B6CFF;
+      --orange: #FF7A45;
+    }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(245,241,236,0.9);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+    .nav {
+      max-width: 1040px;
+      margin: 0 auto;
+      height: 68px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo { font-weight: 900; font-size: 22px; letter-spacing: -0.6px; }
+    .nav-links { display: flex; gap: 18px; color: var(--muted); font-size: 14px; font-weight: 600; }
+    .nav-links a:hover { color: var(--dark); }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 92px 28px 120px;
+    }
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+    }
+    .intro {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 20px;
+      margin-bottom: 48px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 18px 60px rgba(6,30,66,0.08);
+      margin-bottom: 22px;
+    }
+    h2 {
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+    p { color: var(--muted); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+    ul { color: var(--muted); padding-left: 20px; }
+    li { margin: 8px 0; }
+    .cta {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: var(--dark);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      main { padding-top: 64px; }
+      h1 { letter-spacing: -2px; }
+      .card { padding: 24px; border-radius: 18px; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Caila",
+      "url": "https://caila.social/about",
+      "description": "About Caila, the private social planning app for real friends.",
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "Caila",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "iOS",
+        "url": "https://caila.social/",
+        "downloadUrl": "https://apps.apple.com/gb/app/id6744034075"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="/">Caila</a>
+      <div class="nav-links">
+        <a href="/social-planning-app">Social planning app</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow">About Caila</div>
+    <h1>A social planning app for real friends.</h1>
+    <p class="intro">Caila helps friends share the plans still ahead of them, from trips and events to casual happenings and ideas, so they can spot overlaps before the moment passes.</p>
+
+    <section class="card">
+      <h2>What Caila is</h2>
+      <p>Caila is a private social app for planning real life with the people already in your life. Instead of looking back at what friends did after it happens, Caila is built around what friends are doing next.</p>
+      <p>People use Caila to share upcoming trips, events, recurring plans, floats and recommendations with friends or specific crews.</p>
+    </section>
+
+    <section class="card">
+      <h2>What Caila helps with</h2>
+      <ul>
+        <li>Seeing when friends will be in the same city.</li>
+        <li>Sharing upcoming trips, events and plans privately.</li>
+        <li>Finding overlaps before they turn into missed chances.</li>
+        <li>Planning with crews instead of losing ideas in group chats.</li>
+        <li>Keeping real-life plans in one calm place.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Why it exists</h2>
+      <p>Group chats are useful, but plans often disappear into old messages. Caila gives friends a clearer way to say where they will be, what they are thinking about doing, and who might want to join.</p>
+      <a class="cta" href="https://apps.apple.com/gb/app/id6744034075">View Caila on the App Store</a>
+    </section>
+  </main>
+
+  <footer>caila.social · Caila Ltd · iOS</footer>
+</body>
+</html>

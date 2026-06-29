@@ -14,12 +14,37 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Caila",
-      "url": "https://caila.social/",
-      "description": "Caila helps real friends share upcoming trips, events, and plans.",
-      "sameAs": [
-        "https://caila.social/"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://caila.social/#organization",
+          "name": "Caila",
+          "url": "https://caila.social/",
+          "description": "Caila helps real friends share upcoming trips, events, and plans.",
+          "sameAs": [
+            "https://caila.social/"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://caila.social/#app",
+          "name": "Caila",
+          "applicationCategory": "SocialNetworkingApplication",
+          "operatingSystem": "iOS",
+          "url": "https://caila.social/",
+          "downloadUrl": "https://apps.apple.com/gb/app/id6744034075",
+          "description": "Caila is a private social planning app for real friends to share upcoming trips, events, plans and overlaps before they happen.",
+          "publisher": {
+            "@id": "https://caila.social/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://caila.social/#website",
+          "name": "Caila",
+          "url": "https://caila.social/",
+          "description": "The official website for Caila, the social planning app for real friends."
+        }
       ]
     }
   </script>
@@ -935,6 +960,7 @@
       <li><a href="#problem">Features</a></li>
       <li><a href="#how-it-works">How it works</a></li>
       <li><a href="#privacy">Privacy</a></li>
+      <li><a href="/about">About</a></li>
     </ul>
   </nav>
   <a href="https://apps.apple.com/gb/app/id6744034075" class="header-cta">iOS App ↗</a>
@@ -951,7 +977,7 @@
         Connecting people to moments<br /><em>before</em> they happen, not after.
       </h1>
       <p class="hero-sub reveal">
-        Share your upcoming trips, events, and plans with the people already in your life.
+        Caila is a private social planning app for real friends. Share upcoming trips, events, plans and overlaps with the people already in your life.
       </p>
       <div class="hero-actions reveal">
         <a href="https://apps.apple.com/gb/app/id6744034075" class="btn-orange-pulse">Follow the journey</a>
@@ -1334,6 +1360,8 @@
   <nav class="footer-nav">
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Service</a>
+    <a href="/about">About</a>
+    <a href="/social-planning-app">Social Planning App</a>
   </nav>
 </footer>
 
