@@ -111,8 +111,14 @@
       box-shadow: 0 1px 0 var(--border-w);
     }
     .header-logo {
+      display: inline-flex; align-items: center; gap: 9px;
       font-size: 21px; font-weight: 800; letter-spacing: -0.5px;
       color: var(--dark);
+    }
+    .header-logo-mark {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(6,30,66,0.12);
     }
     .header-nav {
       display: flex; align-items: center; gap: 32px;
@@ -954,7 +960,10 @@
 
 <!-- ── Header ── -->
 <header class="site-header" id="site-header">
-  <a class="header-logo" href="#">Caila</a>
+  <a class="header-logo" href="/" aria-label="Caila home">
+    <img class="header-logo-mark" src="caila-logo-mark.png" alt="" />
+    <span>Caila</span>
+  </a>
   <nav>
     <ul class="header-nav">
       <li><a href="#problem">Features</a></li>
@@ -980,7 +989,7 @@
         Caila is a private social planning app for real friends. Share upcoming trips, events, plans and overlaps with the people already in your life.
       </p>
       <div class="hero-actions reveal">
-        <a href="https://apps.apple.com/gb/app/id6744034075" class="btn-orange-pulse">Follow the journey</a>
+        <a href="https://apps.apple.com/gb/app/id6744034075" class="btn-orange-pulse">Join Caila</a>
       </div>
       <div class="hero-trust reveal">
         <div class="trust-chip"><div class="trust-pip"></div> Free to use</div>
@@ -1347,7 +1356,7 @@
     <div class="mascot-cta-text">
       <h2 class="mascot-cta-h2 reveal">Ready to see who's in your city?</h2>
       <p class="mascot-cta-sub reveal">Join Caila and start sharing your plans with the people already in your life.</p>
-      <a href="https://apps.apple.com/gb/app/id6744034075" class="btn-orange-pulse reveal">Follow the journey</a>
+      <a href="https://apps.apple.com/gb/app/id6744034075" class="btn-orange-pulse reveal">Join Caila</a>
     </div>
   </div>
 </section>
