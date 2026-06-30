@@ -1310,8 +1310,14 @@
       gap: 20px; flex-wrap: wrap;
     }
     .footer-logo {
+      display: inline-flex; align-items: center; gap: 9px;
       font-size: 18px; font-weight: 800;
       letter-spacing: -0.3px; color: white;
+      text-decoration: none;
+    }
+    .footer-logo-mark {
+      width: 28px; height: 28px;
+      border-radius: 8px;
     }
     .footer-copy { font-size: 13px; color: rgba(255,255,255,0.28); }
     .footer-nav {
@@ -1922,7 +1928,10 @@
 
 <!-- ── Footer ── -->
 <footer>
-  <span class="footer-logo">Caila</span>
+  <a href="/" class="footer-logo">
+    <img src="/caila-logo-mark.png" alt="Caila logo" class="footer-logo-mark" />
+    Caila
+  </a>
   <p class="footer-copy">© 2026 Caila Ltd · iOS · caila.social</p>
   <nav class="footer-nav">
     <a href="/privacy">Privacy Policy</a>
