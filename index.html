@@ -450,6 +450,85 @@
       width: 100%; display: block;
       object-fit: cover; max-height: 420px;
     }
+    .banner-card {
+      position: absolute;
+      z-index: 2;
+      min-width: 238px;
+      border: 1px solid rgba(216,208,240,0.88);
+      border-radius: 16px;
+      background: rgba(255,252,250,0.88);
+      box-shadow: 0 18px 48px rgba(6,30,66,0.16);
+      padding: 14px 16px;
+      line-height: 1.25;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .banner-card--plan {
+      left: max(32px, 9vw);
+      bottom: 34px;
+    }
+    .banner-card--overlap {
+      right: max(28px, 8vw);
+      top: 32px;
+    }
+    .banner-card-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .banner-card-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 0 5px rgba(255,122,69,0.12);
+    }
+    .banner-card-title {
+      color: var(--dark);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      margin-bottom: 4px;
+    }
+    .banner-card-meta {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .banner-card--overlap .banner-card-label {
+      color: var(--purple);
+    }
+    .banner-card--overlap .banner-card-label::before {
+      background: var(--purple);
+      box-shadow: 0 0 0 5px rgba(139,108,255,0.14);
+    }
+    @media (max-width: 760px) {
+      .banner-card {
+        min-width: 0;
+        max-width: calc(100% - 48px);
+        padding: 12px 14px;
+      }
+      .banner-card--plan {
+        left: 24px;
+        bottom: 18px;
+      }
+      .banner-card--overlap {
+        right: 24px;
+        top: 18px;
+      }
+      .banner-card-title { font-size: 14px; }
+      .banner-card-meta { font-size: 12px; }
+    }
+    @media (max-width: 520px) {
+      .banner-card--overlap { display: none; }
+    }
 
     .overlap-section { padding: 120px 0; background: var(--bg); }
 
@@ -1288,6 +1367,16 @@
 ════════════════════════════════════ -->
 <section class="banner-section">
   <img src="real-plans.png" alt="Real plans. Real friends. Real life." />
+  <div class="banner-card banner-card--plan reveal" aria-label="Plan: Picnic today, 4 friends going">
+    <div class="banner-card-label">Plan</div>
+    <div class="banner-card-title">Picnic</div>
+    <div class="banner-card-meta">Today · 4 friends going</div>
+  </div>
+  <div class="banner-card banner-card--overlap reveal" aria-label="Overlap found: Alex is nearby this weekend">
+    <div class="banner-card-label">Overlap found</div>
+    <div class="banner-card-title">Alex is nearby</div>
+    <div class="banner-card-meta">This weekend</div>
+  </div>
 </section>
 
 <!-- ════════════════════════════════════
