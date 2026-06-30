@@ -198,8 +198,9 @@
       pointer-events: none; user-select: none;
       transform-origin: 58% 76%;
       animation: mascotWave 5.8s ease-in-out infinite;
-      -webkit-mask-image: linear-gradient(to bottom, black 62%, rgba(0,0,0,0.6) 80%, transparent 97%);
-      mask-image: linear-gradient(to bottom, black 62%, rgba(0,0,0,0.6) 80%, transparent 97%);
+      mix-blend-mode: multiply;
+      -webkit-mask-image: radial-gradient(ellipse 74% 80% at 52% 56%, black 44%, rgba(0,0,0,0.9) 62%, rgba(0,0,0,0.35) 78%, transparent 92%);
+      mask-image: radial-gradient(ellipse 74% 80% at 52% 56%, black 44%, rgba(0,0,0,0.9) 62%, rgba(0,0,0,0.35) 78%, transparent 92%);
     }
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
@@ -1190,8 +1191,9 @@
       width: 100%; max-width: 380px;
       transform: scaleX(-1);
       display: block;
-      -webkit-mask-image: linear-gradient(to bottom, black 62%, rgba(0,0,0,0.6) 80%, transparent 97%);
-      mask-image: linear-gradient(to bottom, black 62%, rgba(0,0,0,0.6) 80%, transparent 97%);
+      mix-blend-mode: multiply;
+      -webkit-mask-image: radial-gradient(ellipse 78% 82% at 52% 56%, black 44%, rgba(0,0,0,0.9) 62%, rgba(0,0,0,0.35) 78%, transparent 92%);
+      mask-image: radial-gradient(ellipse 78% 82% at 52% 56%, black 44%, rgba(0,0,0,0.9) 62%, rgba(0,0,0,0.35) 78%, transparent 92%);
     }
     .mascot-cta-text {
       padding-bottom: 80px;
